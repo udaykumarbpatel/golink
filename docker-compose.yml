@@ -1,0 +1,18 @@
+version: '2'
+services:
+  web:
+    build: .
+    hostname: golink
+    ports:
+      - "80:5000"
+    volumes:
+      - /Users/udaykumarbpatel/dev/python/golink:/opt/golink-app
+    container_name: golink-app_2
+    depends_on:
+      - db
+    links:
+      - db:golink_mongodb_2
+  db:
+    image: mongo:3.0.2
+    container_name: golink_mongodb_2
+    hostname: golinkmongo
