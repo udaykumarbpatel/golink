@@ -1,10 +1,12 @@
 FROM python:2.7.13-slim
 
-RUN mkdir /opt/golink-app
+RUN apt-get update && apt-get install -y git
 
-WORKDIR /opt/golink-app
+RUN git clone https://github.com/udaykumarbpatel/golink.git
 
-ADD . .
+RUN cd golink
+
+WORKDIR golink
 
 RUN pip install -r requirement.txt
 
