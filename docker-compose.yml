@@ -5,8 +5,6 @@ services:
     hostname: golink
     ports:
       - "3134:5000"
-    volumes:
-      - ./golink:/opt/golink-app
     container_name: golink-app_2
     depends_on:
       - db
