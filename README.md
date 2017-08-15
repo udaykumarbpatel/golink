@@ -1,16 +1,5 @@
 # golink
 
-update the docket-compose.yml file for the volume.
-
-```sh
-Before:
-      volumes:
-      - /Users/udaykumarbpatel/dev/python:/opt/golink-app
-After:
-    volumes:
-      - <path of the code>:/opt/golink-app
-```
-
 Run the following command:
 
 ```sh
